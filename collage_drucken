@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cp /home/pi/fotobox/fotobox_bilder/*.jpg /home/pi/fotobox/fotobox_bilder_fertig/
+mogrify -resize 968x648 /home/pi/fotobox/fotobox_bilder/*.jpg
+montage /home/pi/fotobox/fotobox_bilder/*.jpg -tile 2x2 -geometry +10+10 /home/pi/fotobox/temp/temp_montage2.jpg
+montage /home/pi/fotobox/temp/temp_montage2.jpg /home/pi/fotobox/label_montage/label.jpg -tile 2x1 -geometry +5+5 /home/pi/fotobox/temp/temp_montage3.jpg
+lp -d Canon /home/pi/fotobox/temp/temp_montage3.jpg
+suffix=$(date +%H%M%S)
+cp /home/pi/fotobox/temp/temp_montage3.jpg /home/pi/fotobox/bilder_montage/PB_${suffix}.jpg
+rm /home/pi/fotobox/fotoboxbilder/*.jpg
+rm /home/pi/temp*
