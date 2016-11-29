@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xli -f -w /home/pi/Fotokiste/blackscreen.png &
+eog -f -w /home/pi/Fotokiste/blackscreen.png & #Balckscreen wird über Terminal gelegt ! Evtl. xli besser ?
 
 mkdir -p -m 777 /home/pi/Fotokiste/Bilder/"`date --iso-8601`" && cd $_ #erstellt ein Verzeichniss des heutigen Tages im Ordner Unterordner Bilder und wechselt in diesen Ornder
 
