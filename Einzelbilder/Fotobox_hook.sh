@@ -20,7 +20,7 @@ case "$ACTION" in
         if [ "$TYPE" = 'image/tiff' ]; then # Falls es sich um ein War-Foto handelt ...
 					./convertPicture.sh $ARGUMENT &
         else # fuer das jpg-Bild
-					./diashow.sh "$ARGUMENT" &
+					/home/pi/Fotokiste/diashow.sh "$ARGUMENT" &
 
         fi
 
