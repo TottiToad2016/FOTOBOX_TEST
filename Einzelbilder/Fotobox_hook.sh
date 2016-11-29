@@ -1,3 +1,6 @@
+#!/bin/sh
+
+
 self=`basename $0`
 
 case "$ACTION" in
