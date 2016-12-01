@@ -11,7 +11,7 @@ FILE2TRANSFER=$FILENAME
 REMOTEDIR=/
 
 FTP_SERVER=192.168.178.173  #Bsp.: 192.168.0.100
-#FTP_PORT=26000
+FTP_PORT=26000
 FTP_USER=snitch
 FTP_PASS=fotobox
 
@@ -25,7 +25,7 @@ REMOTEDIR=/
 
 # Dateien per FTP auf den Server schieben
 ftp -ni << END_UPLOAD
-  open $FTP_SERVER:26000
+  open $FTP_SERVER $FTP_PORT
   user $FTP_USER $FTP_PASS
 #  cd $REMOTEDIR
   bin
