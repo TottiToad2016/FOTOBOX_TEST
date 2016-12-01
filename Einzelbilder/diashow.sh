@@ -25,7 +25,7 @@ REMOTEDIR=/
 
 # Dateien per FTP auf den Server schieben
 ftp -ni << END_UPLOAD
-  open $FTP_SERVER
+  open $FTP_SERVER:FTP_PORT
   user $FTP_USER $FTP_PASS
 #  cd $REMOTEDIR
   bin
