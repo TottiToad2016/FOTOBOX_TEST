@@ -8,10 +8,10 @@ feh -F --cycle-once -D6 ./$FILENAME && feh -z -F -R 2 -D 1 -Z ./*.jpg
 
 FILE2TRANSFER=$FILENAME
 
-#REMOTEDIR=/html/fotobox2/Bilder/Album/
+REMOTEDIR=/
 
-FTP_SERVER=192.168.178.105  #Bsp.: 192.168.0.100
-FTP_PORT=26000
+FTP_SERVER=192.168.178.173:26000  #Bsp.: 192.168.0.100
+#FTP_PORT=26000
 FTP_USER=snitch
 FTP_PASS=fotobox
 
@@ -19,7 +19,7 @@ FTP_PASS=fotobox
 FILE2TRANSFER=$FILENAME
 
 #Das Verzeichnis wohin die Datei uebertragen werden soll
-REMOTEDIR=/html/Fotobox/Fotobox/Albums/
+REMOTEDIR=/
 
 ### ENDE DER EINSTELLUNGEN
 
