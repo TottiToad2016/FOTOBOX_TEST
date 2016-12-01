@@ -27,7 +27,7 @@ REMOTEDIR=/
 ftp -ni << END_UPLOAD
   open $FTP_SERVER $FTP_PORT
   user $FTP_USER $FTP_PASS
-#  cd $REMOTEDIR
+  cd $REMOTEDIR
   bin
   mput $FILE2TRANSFER $(basename $FILE2TRANSFER)
   quit
