@@ -2,6 +2,8 @@
 
 import RPi.GPIO as GPIO, time, os, subprocess
 
+FILENAME=
+feh -F --cycle-once -D6 ./$FILENAME
 # GPIO setup
 GPIO.setmode(GPIO.BCM)
 SWITCH = 24
