@@ -1,3 +1,6 @@
+COPY From https://github.com/reuterbal/photobooth.git
+by reuterbal
+
 # photobooth
 A Raspberry-Pi powered photobooth using gPhoto 2.
 
