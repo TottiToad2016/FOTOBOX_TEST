@@ -21,7 +21,7 @@ from events import Rpi_GPIO as GPIO
 #####################
 
 # Screen size
-display_size = (1024, 600)
+display_size = (1920, 1080)
 
 # Maximum size of assembled image
 image_size = (2352, 1568)
