@@ -24,10 +24,10 @@ from events import Rpi_GPIO as GPIO
 display_size = (1920, 1080)
 
 # Maximum size of assembled image
-image_size = (2352, 1568)
+image_size = (2144, 1424)
 
 # Size of pictures in the assembled image
-thumb_size = (1176, 784)
+thumb_size = (1072, 712)
 
 # Image basename
 picture_basename = datetime.now().strftime("%Y-%m-%d/pic")
