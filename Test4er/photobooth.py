@@ -2,6 +2,7 @@
 # Created by br _at_ re-web _dot_ eu, 2015-2016
 
 import os
+import cups #Test
 from datetime import datetime
 from glob import glob
 from sys import exit
@@ -398,6 +399,11 @@ class Photobooth:
         outfile = self.assemble_pictures(filenames)
 
         # Show pictures for 10 seconds
+        conn = cups.Connection()
+        printers = 'Canon'              #conn.getPrinters()
+        printer_name = 'Canon'          #printers.keys()[0]
+        cups.setUser('pi')
+        conn.printFile(printer_name, outfile, "Photo Booth",{})
         self.display.clear()
         self.display.show_picture(outfile, size, (0,0))
         self.display.apply()
