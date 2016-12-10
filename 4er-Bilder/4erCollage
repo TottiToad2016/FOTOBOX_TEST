@@ -37,9 +37,9 @@ snap = 0
         time.sleep(0.1)
       GPIO.output(POSE_LED, 0)
       print("SNAP")
-      gpout = subprocess.check_output("gphoto2 --capture-image-and-download --filename /home/pi/photobooth_images/Bild1.jpg", stderr=subprocess.STDOU$
+      gpout = subprocess.check_output("gphoto2 --capture-image-and-download --filename /home/pi/photobooth_images/Bild1.jpg", stderr=subprocess.STDOUT, shell=True)
       subprocess.call('killall feh', shell=True)
-      subprocess.Popen("feh /home/pi/photobooth_images/photobooth%H%M%S.jpg -F -Z", shell=True)
+      subprocess.Popen("feh /home/pi/photobooth_images/*.jpg -F -Z", shell=True)
       print(gpout)
       if "ERROR" not in gpout:
         snap += 1
