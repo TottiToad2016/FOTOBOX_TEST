@@ -16,6 +16,21 @@ from camera import CameraException, Camera_gPhoto as CameraModule
 from slideshow import Slideshow
 from events import Rpi_GPIO as GPIO
 
+""" Test Zeilen """
+pygame.init()
+pygame.font.init()
+font = pygame.font.SysFont("comicsansms", 600)
+n1 = font.render("1",1,(255,0,0))
+n2 = font.render("2",1,(255,0,0))
+n3 = font.render("3",1,(255,0,0))
+n4 = font.render("4",1,(255,0,0))
+n5 = font.render("5",1,(255,0,0))
+smile = font .render("SMILE!",1,(255,0,0))
+please = font .render("Please",1,(255,0,0))
+wait = font .render("Wait",1,(255,0,0))
+
+""" Ende der Test Zeilen """
+
 #####################
 ### Configuration ###
 #####################
@@ -331,12 +346,43 @@ class Photobooth:
                 # Limit progress to 1 "second" per preview (e.g., too slow on Raspi 1)
                 toc = min(toc + 1, clock() - tic)
         else:
-            for i in range(seconds):
+            blackColor = pygame.Color(0,0,0)
+            pygame.draw.rect(screen,blackColor,Rect(0,0,w,h))
+            pygame.display.flip()
+            blackColor = pygame.Color(0,0,0)
+            screen.blit(n5, ((w-n5.get_width())//2, (h-n5.get_height())//2))
+            pygame.display.flip()
+            time.sleep(1)
+             
+            pygame.draw.rect(screen,blackColor,Rect(0,0,w,h))
+            screen.blit(n4, ((w-n5.get_width())//2, (h-n5.get_height())//2))
+            pygame.display.flip()
+            time.sleep(1)
+             
+            pygame.draw.rect(screen,blackColor,Rect(0,0,w,h))
+            screen.blit(n3, ((w-n5.get_width())//2, (h-n5.get_height())//2))
+            pygame.display.flip()
+            time.sleep(1)
+             
+            pygame.draw.rect(screen,blackColor,Rect(0,0,w,h))
+            screen.blit(n2, ((w-n5.get_width())//2, (h-n5.get_height())//2))
+            pygame.display.flip()
+            time.sleep(1)
+             
+            pygame.draw.rect(screen,blackColor,Rect(0,0,w,h))
+            screen.blit(n1, ((w-n5.get_width())//2, (h-n5.get_height())//2))
+            pygame.display.flip()
+            time.sleep(1)
+             
+            pygame.draw.rect(screen,blackColor,Rect(0,0,w,h))
+            screen.blit(smile, ((w-smile.get_width())//2, (h-smile.get_height())//2))
+            pygame.display.flip()
+"""            for i in range(seconds):
                 self.display.clear()
                 self.display.show_message(str(seconds - i))
                 self.display.apply()
                 sleep(1)
-
+"""
     def take_picture(self):
         """Implements the picture taking routine"""
         # Disable lamp
